@@ -21,9 +21,9 @@
                 <span class="text-xs font-bold text-teal-800 uppercase tracking-wider">🎯 Hackathon Demo Account</span>
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-teal-200 text-teal-900">PRELOADED</span>
               </div>
-              <p class="text-xs text-teal-900 mt-1">Log in immediately as <strong>Sanjay Sharma</strong> (Family Admin with 4 members pre-configured).</p>
+              <p class="text-xs text-teal-900 mt-1">Log in immediately as <strong>Divya G</strong> (Family Admin with 4 members pre-configured).</p>
               <button onclick="AuthView.loginAsDemo()" class="mt-3 w-full py-2.5 px-4 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs rounded-xl shadow transition flex items-center justify-center gap-2">
-                <span>1-Click Demo Login (Sanjay Sharma)</span>
+                <span>1-Click Demo Login (Divya G)</span>
                 <span>👋</span>
               </button>
             </div>
@@ -36,7 +36,7 @@
             <form onsubmit="AuthView.handleCustomLogin(event)" class="space-y-4 text-left">
               <div>
                 <label class="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
-                <input type="email" id="auth-email" value="sanjay.sharma@example.com" class="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500" required />
+                <input type="email" id="auth-email" value="divya.g@example.com" class="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500" required />
               </div>
               <div>
                 <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
@@ -66,7 +66,7 @@
 
     loginAsDemo() {
       window.NotificationUtil.playChime();
-      window.NotificationUtil.showToast('Welcome Sanjay!', 'Logged into CareBridge AI Family Hub.', 'success');
+      window.NotificationUtil.showToast('Welcome Divya!', 'Logged into CareBridge AI Family Hub.', 'success');
       window.CareBridgeStore.setView('dashboard');
     },
 

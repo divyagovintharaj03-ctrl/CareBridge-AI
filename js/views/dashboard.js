@@ -24,7 +24,7 @@
                 <span>•</span>
                 <span>${state.user.incomeCategory}</span>
               </div>
-              <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Good Morning, Sanjay 👋</h1>
+              <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Good Morning, Divya 👋</h1>
               <p class="text-sm text-slate-600 mt-1">Here is your family's centralized health & wellness overview.</p>
             </div>
 
@@ -220,7 +220,7 @@
                     </div>
                     <div>
                       <p class="text-xs font-bold text-slate-900">Evening Medication Dose (08:00 PM)</p>
-                      <p class="text-[11px] text-slate-500">Atorvastatin 10mg (Sanjay) & Metformin 500mg (Ramesh)</p>
+                      <p class="text-[11px] text-slate-500">Omega-3 1000mg (Divya) & Metformin 500mg (Ramesh)</p>
                     </div>
                   </div>
                   <button onclick="CareBridgeStore.setView('medications')" class="text-xs font-bold text-teal-600 hover:underline">

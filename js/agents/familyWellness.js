@@ -13,8 +13,8 @@
 
       const upcomingTasks = [
         { member: 'Ramesh Sharma', task: 'Diabetic Foot & HbA1c Review with Dr. V. K. Nambiar', dueDate: 'Sep 12, 2026', type: 'Appointment' },
-        { member: 'Sanjay Sharma', task: 'Cardiology Review & BP Checkup', dueDate: 'Sep 18, 2026', type: 'Appointment' },
-        { member: 'Priya Sharma', task: 'Thyroid Panel TSH Blood Test', dueDate: 'Oct 04, 2026', type: 'Lab Test' },
+        { member: 'Divya G', task: 'Cardiology Review & BP Checkup', dueDate: 'Sep 18, 2026', type: 'Appointment' },
+        { member: 'Priya G', task: 'Thyroid Panel TSH Blood Test', dueDate: 'Oct 04, 2026', type: 'Lab Test' },
         { member: 'Ananya Sharma', task: '12-Year Td/HPV Immunization Booster', dueDate: 'Nov 15, 2026', type: 'Vaccine' }
       ];
 

@@ -44,7 +44,7 @@
                     🩸 Ramesh: CBC & Iron Profile (Anemia)
                   </button>
                   <button onclick="ReportsView.simulatePreloadedUpload('lipid')" class="px-3 py-1.5 rounded-lg bg-sky-50 text-sky-800 border border-sky-200 text-xs font-semibold hover:bg-sky-100 transition">
-                    🧪 Sanjay: Lipid & Metabolic Panel
+                    🧪 Divya: Lipid & Metabolic Panel
                   </button>
                   <button onclick="ReportsView.simulatePreloadedUpload('thyroid')" class="px-3 py-1.5 rounded-lg bg-purple-50 text-purple-800 border border-purple-200 text-xs font-semibold hover:bg-purple-100 transition">
                     🦋 Priya: Thyroid Function (TSH/T3/T4)

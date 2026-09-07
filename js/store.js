@@ -2,15 +2,15 @@
 (function(window) {
   'use strict';
 
-  const STORAGE_KEY = 'carebridge_ai_state_v1';
+  const STORAGE_KEY = 'carebridge_ai_state_v2';
 
   // Default Realistic Demo State (All Fictional Data)
   const defaultState = {
     user: {
       id: 'usr_01',
-      name: 'Sanjay Sharma',
-      email: 'sanjay.sharma@example.com',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+      name: 'Divya G',
+      email: 'divya.g@example.com',
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
       role: 'Family Health Admin',
       city: 'Bengaluru',
       state: 'Karnataka',
@@ -28,34 +28,34 @@
     familyMembers: [
       {
         id: 'mem_01',
-        name: 'Sanjay Sharma',
-        relation: 'Self / Father',
-        age: 42,
-        gender: 'Male',
+        name: 'Divya G',
+        relation: 'Self / Mother',
+        age: 38,
+        gender: 'Female',
         bloodGroup: 'B+',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
         allergies: ['Penicillin', 'Dust Mites'],
-        emergencyContact: '+91 98765 43210 (Priya - Wife)',
-        vitals: { bp: '124/82 mmHg', pulse: '72 bpm', spo2: '98%', weight: '76 kg', bmi: '24.8' },
-        healthScore: 82,
-        adherenceRate: 92,
+        emergencyContact: '+91 98765 43210 (Karthik - Spouse)',
+        vitals: { bp: '122/80 mmHg', pulse: '72 bpm', spo2: '98%', weight: '64 kg', bmi: '23.5' },
+        healthScore: 86,
+        adherenceRate: 94,
         status: 'Healthy',
         doctor: 'Dr. Arvind Rao (Cardiologist, Manipal Clinic)',
-        upcomingAppointment: 'Sep 18, 2026 - Routine BP & Cardio Review',
-        notes: 'Mild hyperlipidemia managed by diet and lifestyle.'
+        upcomingAppointment: 'Sep 18, 2026 - Routine Health & Wellness Review',
+        notes: 'Mild lipid elevation managed by diet and active lifestyle.'
       },
       {
         id: 'mem_02',
-        name: 'Priya Sharma',
-        relation: 'Spouse / Mother',
-        age: 39,
+        name: 'Priya G',
+        relation: 'Sister / Co-Admin',
+        age: 34,
         gender: 'Female',
         bloodGroup: 'O+',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
         allergies: ['Sulfa Drugs'],
-        emergencyContact: '+91 98765 43211 (Sanjay - Husband)',
-        vitals: { bp: '118/76 mmHg', pulse: '76 bpm', spo2: '99%', weight: '62 kg', bmi: '22.4' },
-        healthScore: 85,
+        emergencyContact: '+91 98765 43211 (Divya - Sister)',
+        vitals: { bp: '118/76 mmHg', pulse: '76 bpm', spo2: '99%', weight: '58 kg', bmi: '22.0' },
+        healthScore: 88,
         adherenceRate: 95,
         status: 'Healthy',
         doctor: 'Dr. Sunita Deshmukh (Endocrinologist)',
@@ -71,7 +71,7 @@
         bloodGroup: 'B+',
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
         allergies: ['Aspirin (Mild Gastric Upset)'],
-        emergencyContact: '+91 98765 43211 (Sanjay - Son)',
+        emergencyContact: '+91 98765 43211 (Divya - Daughter)',
         vitals: { bp: '138/88 mmHg', pulse: '68 bpm', spo2: '96%', weight: '71 kg', bmi: '25.3' },
         healthScore: 71,
         adherenceRate: 84,
@@ -238,7 +238,7 @@
       {
         id: 'rep_02',
         memberId: 'mem_01',
-        memberName: 'Sanjay Sharma',
+        memberName: 'Divya G',
         reportTitle: 'Comprehensive Lipid & Metabolic Profile',
         labName: 'Apollo Diagnostics Laboratory',
         reportDate: '20 Aug 2026',
@@ -253,7 +253,7 @@
           { name: 'HbA1c', value: '5.4', unit: '%', refRange: '< 5.7', status: 'normal', percentOfMax: 45 }
         ],
         questionsForDoctor: [
-          'Is the current low-dose Atorvastatin 10 mg achieving target LDL levels?',
+          'Is lifestyle modification and diet sufficient before considering statin therapy?',
           'What specific dietary fiber adjustments are recommended before our next checkup?'
         ],
         safetyNotes: 'Educational summary only. Consult Dr. Arvind Rao.'
@@ -299,20 +299,20 @@
       {
         id: 'tl_02',
         memberId: 'mem_01',
-        memberName: 'Sanjay Sharma',
+        memberName: 'Divya G',
         date: '28 Aug 2026',
         time: '04:15 PM',
-        title: 'Cardiology Follow-up with Dr. Arvind Rao',
+        title: 'Health Follow-up with Dr. Arvind Rao',
         category: 'Doctor Consultation',
         categoryColor: 'blue',
         icon: 'stethoscope',
-        description: 'Blood pressure checked at 124/82 mmHg. Atorvastatin 10mg continued. Advised 30 mins brisk daily walk.',
+        description: 'Blood pressure checked at 122/80 mmHg. Omega-3 & dietary wellness plan continued. Advised 30 mins brisk daily walk.',
         badge: 'Consultation'
       },
       {
         id: 'tl_03',
         memberId: 'mem_02',
-        memberName: 'Priya Sharma',
+        memberName: 'Priya G',
         date: '18 Aug 2026',
         time: '10:00 AM',
         title: 'Influenza Annual Vaccination Recorded',
@@ -410,7 +410,7 @@
         matchScore: 'High Match (94%)',
         state: 'Karnataka (Bengaluru Urban)',
         description: 'Free comprehensive primary healthcare, monthly non-communicable disease (NCD) drug refills, and routine blood/urine tests at Urban Primary Health Centres.',
-        whyRelevant: 'Both Sanjay (42) and Priya (39) can access free routine lipid, fasting sugar, and BP monitoring tests near their residential locality.',
+        whyRelevant: 'Both Divya (38) and Priya (34) can access free routine lipid, fasting sugar, and BP monitoring tests near their residential locality.',
         requiredDocuments: ['Aadhaar Card or Voter ID', 'Previous Prescription / NCD Health Card'],
         officialUrl: 'https://nhm.gov.in',
         portalName: 'National Health Mission',
@@ -542,7 +542,7 @@
         sender: 'agent',
         agentName: 'Health Coordinator Agent',
         timestamp: '13:30 PM',
-        text: 'Hello Sanjay! I am the **CareBridge Health Coordinator Agent**. Together with our 7 specialized AI agents, I am here to help your family organize medical reports, track medications, understand wellness milestones, and discover relevant welfare programs.\n\nHow can our agent team assist your family today?',
+        text: 'Hello Divya! I am the **CareBridge Health Coordinator Agent**. Together with our 7 specialized AI agents, I am here to help your family organize medical reports, track medications, understand wellness milestones, and discover relevant welfare programs.\n\nHow can our agent team assist your family today?',
         agentsInvolved: ['Health Coordinator Agent', 'Family Wellness Agent'],
         structuredData: {
           type: 'welcome',
@@ -558,7 +558,7 @@
 
     // Notifications
     notifications: [
-      { id: 'notif_01', type: 'medication', title: 'Medication Due', message: 'Atorvastatin 10 mg scheduled for Sanjay at 08:00 PM.', time: '10 mins ago', read: false, icon: 'pill', color: 'blue' },
+      { id: 'notif_01', type: 'medication', title: 'Medication Due', message: 'Omega-3 Fish Oil scheduled for Divya at 08:00 AM.', time: '10 mins ago', read: false, icon: 'pill', color: 'blue' },
       { id: 'notif_02', type: 'report', title: 'Lab Analysis Ready', message: 'CBC report for Ramesh Sharma has 3 suggested doctor discussion points.', time: '1 hour ago', read: false, icon: 'file-text', color: 'teal' },
       { id: 'notif_03', type: 'appointment', title: 'Upcoming Doctor Visit', message: 'Dr. V. K. Nambiar consultation for Ramesh on Sep 12, 2026.', time: '4 hours ago', read: true, icon: 'calendar', color: 'purple' },
       { id: 'notif_04', type: 'welfare', title: 'Welfare Scheme Match', message: '2 potential schemes identified for senior citizen healthcare coverage.', time: 'Yesterday', read: true, icon: 'gift', color: 'amber' }

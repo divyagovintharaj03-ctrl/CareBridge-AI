@@ -19,7 +19,7 @@
         name: '🚨 Scenario 2: Emergency Safety Intercept',
         subtitle: 'Watchdog Protocol for Acute Cardiac / Respiratory Symptoms',
         memberId: 'mem_01',
-        memberName: 'Sanjay Sharma (Father, 42)',
+        memberName: 'Divya G (Mother, 38)',
         query: 'I am feeling severe crushing chest pain and shortness of breath since 10 minutes.',
         description: 'Demonstrates real-time safety intercept, emergency modal trip, and local hospital helpline dispatch.',
         targetView: 'assistant'

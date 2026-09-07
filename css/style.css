@@ -1,0 +1,188 @@
+/* CareBridge AI - Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --primary-navy: #0f172a;
+  --primary-blue: #0284c7;
+  --primary-teal: #0d9488;
+  --primary-indigo: #4f46e5;
+  --accent-green: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-red: #ef4444;
+  --bg-main: #f8fafc;
+  --card-bg: #ffffff;
+  --border-subtle: #e2e8f0;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glassmorphism & Card Shadows */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.health-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.health-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border-color: #cbd5e1;
+}
+
+/* Agent Flow Animation & Pulsing Node */
+@keyframes agentPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4); }
+  70% { transform: scale(1.04); box-shadow: 0 0 0 10px rgba(13, 148, 136, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+}
+
+.agent-pulse-active {
+  animation: agentPulse 2s infinite ease-in-out;
+}
+
+@keyframes emergencyBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(0.98); }
+}
+
+.emergency-pulse {
+  animation: emergencyBlink 1.5s infinite;
+}
+
+/* Glow effects */
+.glow-teal {
+  box-shadow: 0 0 20px -2px rgba(13, 148, 136, 0.25);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px -2px rgba(2, 132, 199, 0.25);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px -2px rgba(239, 68, 68, 0.35);
+}
+
+/* Badge styles */
+.badge-healthy {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+.badge-warning {
+  background-color: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+.badge-critical {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+.badge-info {
+  background-color: #f0f9ff;
+  color: #075985;
+  border: 1px solid #bae6fd;
+}
+
+/* Range indicator for lab values */
+.range-bar {
+  height: 8px;
+  border-radius: 4px;
+  position: relative;
+  background: linear-gradient(to right, #93c5fd 0%, #86efac 35%, #86efac 65%, #fca5a5 100%);
+}
+
+.range-pointer {
+  position: absolute;
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #0f172a;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transform: translateX(-50%);
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Presentation Pitch Deck Fullscreen Mode */
+.pitch-deck-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 20%, #0f172a 0%, #020617 90%);
+  color: #f8fafc;
+}
+
+/* Timeline vertical line */
+.timeline-stem::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background-color: #e2e8f0;
+}
+
+/* Chat bubble styling */
+.chat-bubble-agent {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem 1.25rem 1.25rem 0.25rem;
+}
+
+.chat-bubble-user {
+  background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+  color: #ffffff;
+  border-radius: 1.25rem 1.25rem 0.25rem 1.25rem;
+}
+
+/* Code block / Agent log font */
+.agent-log-font {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Floating demo launcher */
+.floating-demo-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+}

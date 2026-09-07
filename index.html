@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareBridge AI — Multi-Agent Family Health & Welfare Assistant</title>
+  <meta name="description" content="One Family. One Health Intelligence. An intelligent multi-agent platform coordinating 7 specialized healthcare AI agents to organize family health, lab reports, medications, and welfare schemes." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>🩺</text></svg>" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0f172a',
+              blue: '#0284c7',
+              teal: '#0d9488',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              red: '#ef4444'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          animation: {
+            fadeIn: 'fadeIn 0.25s ease-out',
+            scaleUp: 'scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+            slideIn: 'slideIn 0.3s ease-out'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            scaleUp: {
+              '0%': { opacity: 0, transform: 'scale(0.96)' },
+              '100%': { opacity: 1, transform: 'scale(1)' }
+            },
+            slideIn: {
+              '0%': { opacity: 0, transform: 'translateY(8px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-teal-500 selection:text-white">
+
+  <!-- Main Root Container for SPA Views -->
+  <div id="app-root"></div>
+
+  <!-- Global Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none max-w-sm w-full"></div>
+
+  <!-- State & Utilities -->
+  <script src="js/store.js"></script>
+  <script src="js/utils/notifications.js"></script>
+  <script src="js/utils/demoScenarios.js"></script>
+
+  <!-- 7 Specialized AI Agents -->
+  <script src="js/agents/emergencySafety.js"></script>
+  <script src="js/agents/healthAssessment.js"></script>
+  <script src="js/agents/medicalReport.js"></script>
+  <script src="js/agents/medication.js"></script>
+  <script src="js/agents/familyWellness.js"></script>
+  <script src="js/agents/welfareScheme.js"></script>
+  <script src="js/agents/healthSummary.js"></script>
+  
+  <!-- Central Orchestrator -->
+  <script src="js/agents/orchestrator.js"></script>
+
+  <!-- SPA Views -->
+  <script src="js/views/landing.js"></script>
+  <script src="js/views/auth.js"></script>
+  <script src="js/views/dashboard.js"></script>
+  <script src="js/views/assistant.js"></script>
+  <script src="js/views/family.js"></script>
+  <script src="js/views/reports.js"></script>
+  <script src="js/views/medications.js"></script>
+  <script src="js/views/timeline.js"></script>
+  <script src="js/views/welfare.js"></script>
+  <script src="js/views/emergency.js"></script>
+  <script src="js/views/agentActivity.js"></script>
+  <script src="js/views/settings.js"></script>
+  <script src="js/views/presentation.js"></script>
+
+  <!-- Main Application Orchestration Controller -->
+  <script src="js/app.js"></script>
+</body>
+</html>
